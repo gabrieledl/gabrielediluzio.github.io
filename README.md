@@ -1,2 +1,2 @@
-# gabrielediluzio.github.io
+# Gabriele Di Luzio Website
 Personal academic website
