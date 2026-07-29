@@ -3,8 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Gabriele Di Luzio — PhD Candidate in Statistics. Research in financial econometrics, dependence modelling, systemic risk and climate finance.">
+
+  <meta
+    name="description"
+    content="Gabriele Di Luzio — PhD Candidate in Finance and Institutions. My research focuses on financial econometrics, dependence modelling, systemic risk, and climate finance."
+  >
+
   <title>Gabriele Di Luzio</title>
+
   <style>
     :root {
       --ink: #171717;
@@ -14,18 +20,30 @@
       --max: 980px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       color: var(--ink);
       background: #fff;
-      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Arial, sans-serif;
     }
 
-    a { color: var(--link); text-underline-offset: 3px; }
-    a:hover { color: #0d2f51; }
+    a {
+      color: var(--link);
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: #0d2f51;
+    }
 
     .wrap {
       width: min(var(--max), calc(100% - 40px));
@@ -33,8 +51,8 @@
     }
 
     header {
-      border-bottom: 1px solid var(--line);
       padding: 22px 0;
+      border-bottom: 1px solid var(--line);
     }
 
     nav {
@@ -56,13 +74,21 @@
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      font-size: .92rem;
+      font-size: 0.92rem;
     }
 
-    .nav-links a { color: #333; text-decoration: none; }
-    .nav-links a:hover { text-decoration: underline; }
+    .nav-links a {
+      color: #333;
+      text-decoration: none;
+    }
 
-    main { padding: 64px 0 80px; }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 64px 0 80px;
+    }
 
     .intro {
       display: grid;
@@ -77,10 +103,12 @@
       aspect-ratio: 1;
       object-fit: cover;
       border-radius: 3px;
-      filter: saturate(.82);
+      filter: saturate(0.82);
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       font-family: Georgia, "Times New Roman", serif;
       font-weight: 600;
     }
@@ -109,7 +137,7 @@
       flex-wrap: wrap;
       gap: 16px;
       margin-top: 24px;
-      font-size: .94rem;
+      font-size: 0.94rem;
     }
 
     section {
@@ -123,13 +151,12 @@
       font-size: 1.75rem;
     }
 
-    .about { max-width: 760px; }
-    .about p:first-child { margin-top: 0; }
+    .about {
+      max-width: 760px;
+    }
 
-    .interests {
-      margin-top: 20px;
-      color: var(--muted);
-      font-size: .94rem;
+    .about p:first-child {
+      margin-top: 0;
     }
 
     .paper {
@@ -140,8 +167,15 @@
       border-top: 1px solid #ececec;
     }
 
-    .paper:first-of-type { padding-top: 0; border-top: 0; }
-    .number { color: #999; font-family: Georgia, "Times New Roman", serif; }
+    .paper:first-of-type {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .number {
+      color: #999;
+      font-family: Georgia, "Times New Roman", serif;
+    }
 
     h3 {
       margin: 0;
@@ -153,10 +187,13 @@
       max-width: 760px;
       margin: 7px 0 0;
       color: var(--muted);
-      font-size: .94rem;
+      font-size: 0.94rem;
     }
 
-    .paper-links { margin-top: 8px; font-size: .9rem; }
+    .paper-links {
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
 
     .timeline-row {
       display: grid;
@@ -166,32 +203,70 @@
       border-top: 1px solid #ececec;
     }
 
-    .timeline-row:first-of-type { padding-top: 0; border-top: 0; }
-    .date { color: var(--muted); font-size: .9rem; }
-    .timeline-row strong { display: block; font-family: Georgia, "Times New Roman", serif; }
-    .timeline-row p { margin: 3px 0 0; color: var(--muted); font-size: .94rem; }
+    .timeline-row:first-of-type {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .timeline-row strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .timeline-row p {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
 
     footer {
-      border-top: 1px solid var(--line);
       padding: 25px 0 40px;
+      border-top: 1px solid var(--line);
       color: #777;
-      font-size: .85rem;
+      font-size: 0.85rem;
     }
 
     @media (max-width: 680px) {
-      nav { align-items: flex-start; }
-      .nav-links { gap: 10px 16px; justify-content: flex-end; }
-      main { padding-top: 42px; }
-      .intro { grid-template-columns: 1fr; gap: 28px; }
-      .portrait { width: 150px; }
-      .timeline-row { grid-template-columns: 1fr; gap: 4px; }
+      nav {
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        justify-content: flex-end;
+        gap: 10px 16px;
+      }
+
+      main {
+        padding-top: 42px;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .portrait {
+        width: 150px;
+      }
+
+      .timeline-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
     <nav class="wrap" aria-label="Main navigation">
       <a class="brand" href="#">Gabriele Di Luzio</a>
+
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#papers">Research</a>
@@ -203,38 +278,59 @@
 
   <main class="wrap">
     <div class="intro">
-      <img class="portrait" src="profile.jpg" alt="Gabriele Di Luzio">
+      <img
+        class="portrait"
+        src="profile.jpg"
+        alt="Gabriele Di Luzio"
+      >
+
       <div>
         <h1>Gabriele Di Luzio</h1>
-        <p class="position">PhD Candidate in Statistics · Sapienza University of Rome</p>
+
+        <p class="position">
+          PhD Candidate in Finance and Institutions · Sapienza University of Rome
+        </p>
+
         <p class="lead">
           I work on financial econometrics, with a focus on dynamic dependence,
-          covariance estimation, copula models, systemic risk and climate finance.
+          covariance estimation, copula models, systemic risk, and climate finance.
         </p>
+
         <div class="quick-links">
-          <a href="cv.pdf" target="_blank" rel="noopener">Curriculum Vitae</a>
-          <a href="mailto:gabrielediluzio98@gmail.com">Email</a>
-          <a href="https://github.com/gabrieledl" target="_blank" rel="noopener">GitHub</a>
+          <a href="cv.pdf" target="_blank" rel="noopener">
+            Curriculum Vitae
+          </a>
+
+          <a href="mailto:gabrielediluzio98@gmail.com">
+            Email
+          </a>
+
+          <a
+            href="https://github.com/gabrieledl"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>
         </div>
       </div>
     </div>
 
     <section id="about">
       <h2>About</h2>
+
       <div class="about">
         <p>
-          I am a PhD Candidate in Statistics at the Department of Statistical
-          Sciences of Sapienza University of Rome. In 2026, I was a Visiting
-          PhD Student at the Department of Statistics of Ludwig Maximilian
-          University of Munich and at the Munich Center for Machine Learning.
+          I am a PhD Candidate in Finance and Institutions at the Department
+          of Social and Economic Sciences of Sapienza University of Rome.
+          I am currently a Visiting PhD Student at the Department of Statistics
+          of Ludwig Maximilian University of Munich and at the Munich Center
+          for Machine Learning.
         </p>
+
         <p>
           My research develops econometric methods for measuring nonlinear,
-          time-varying and tail dependence in financial systems.
-        </p>
-        <p class="interests">
-          Research interests: financial econometrics, copula and GAS models,
-          covariance estimation, systemic risk, climate finance.
+          time-varying, and tail dependence in financial systems.
         </p>
       </div>
     </section>
@@ -244,43 +340,50 @@
 
       <article class="paper">
         <div class="number">1</div>
+
         <div>
-          <h3>Modelling the Impact of Climate News on CDS Dependence: A Generalized Autoregressive Score Approach</h3>
+          <h3>Dynamic Conditional SKEPTIC</h3>
+
           <p>
-            A score-driven factor copula model for studying how physical and
-            transition climate risks affect dependence and joint distress
-            across European credit default swaps.
+            A high-dimensional framework combining volatility dynamics and
+            robust rank-based dependence measures for dynamic covariance
+            matrix estimation.
           </p>
+
           <div class="paper-links">
-            <a href="mailto:gabrielediluzio98@gmail.com?subject=Climate%20CDS%20paper">Request paper</a>
+            <a
+              href="https://arxiv.org/pdf/2512.11648"
+              target="_blank"
+              rel="noopener"
+            >
+              PDF
+            </a>
           </div>
         </div>
       </article>
 
       <article class="paper">
         <div class="number">2</div>
-        <div>
-          <h3>Dynamic Conditional SKEPTIC</h3>
-          <p>
-            A high-dimensional framework combining volatility dynamics and
-            robust rank-based dependence measures for dynamic covariance estimation.
-          </p>
-          <div class="paper-links">
-            <a href="https://arxiv.org/pdf/2512.11648" target="_blank" rel="noopener">PDF</a>
-          </div>
-        </div>
-      </article>
 
-      <article class="paper">
-        <div class="number">3</div>
         <div>
-          <h3>Robust Semiparametric Graphical Models with Skew-Elliptical Distributions</h3>
+          <h3>
+            Robust Semiparametric Graphical Models with Skew-Elliptical
+            Distributions
+          </h3>
+
           <p>
             A robust semiparametric framework for graphical modelling under
             skew-elliptical distributions.
           </p>
+
           <div class="paper-links">
-            <a href="https://arxiv.org/pdf/2501.08033" target="_blank" rel="noopener">PDF</a>
+            <a
+              href="https://arxiv.org/pdf/2501.08033"
+              target="_blank"
+              rel="noopener"
+            >
+              PDF
+            </a>
           </div>
         </div>
       </article>
@@ -291,51 +394,71 @@
 
       <div class="timeline-row">
         <div class="date">2023–Present</div>
+
         <div>
-          <strong>PhD in Statistics</strong>
-          <p>Sapienza University of Rome, Department of Statistical Sciences.</p>
+          <strong>PhD in Finance and Institutions</strong>
+          <p>
+            Sapienza University of Rome, Department of Social and Economic
+            Sciences.
+          </p>
         </div>
       </div>
 
       <div class="timeline-row">
         <div class="date">2026</div>
+
         <div>
           <strong>Visiting PhD Student</strong>
-          <p>Ludwig Maximilian University of Munich, Department of Statistics and MCML.</p>
+          <p>
+            Ludwig Maximilian University of Munich, Department of Statistics
+            and Munich Center for Machine Learning.
+          </p>
         </div>
       </div>
 
       <div class="timeline-row">
         <div class="date">2020–2023</div>
+
         <div>
           <strong>MSc in Quantitative Finance</strong>
-          <p>Sapienza University of Rome · 110/110 cum laude.</p>
+          <p>
+            Sapienza University of Rome · 110/110 cum laude.
+          </p>
         </div>
       </div>
 
       <div class="timeline-row">
         <div class="date">2017–2020</div>
+
         <div>
-          <strong>BSc in Economics</strong>
-          <p>Sapienza University of Rome · 110/110.</p>
+          <strong>BSc in Statistics</strong>
+          <p>Sapienza University of Rome.</p>
         </div>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
+
       <p>
-        For research discussions, seminars, collaborations or professional
+        For research discussions, seminars, collaborations, or professional
         opportunities, email
-        <a href="mailto:gabrielediluzio98@gmail.com">gabrielediluzio98@gmail.com</a>.
+        <a href="mailto:gabrielediluzio98@gmail.com">
+          gabrielediluzio98@gmail.com
+        </a>.
       </p>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">© <span id="year"></span> Gabriele Di Luzio</div>
+    <div class="wrap">
+      © <span id="year"></span> Gabriele Di Luzio
+    </div>
   </footer>
 
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 </body>
 </html>
