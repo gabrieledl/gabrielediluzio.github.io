@@ -3,24 +3,867 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriele Di Luzio</title>
+
+    <meta name="description"
+          content="Gabriele Di Luzio — PhD Candidate in Statistics and Quantitative Finance. Research in financial econometrics, copulas, systemic risk and climate finance.">
+
+    <title>Gabriele Di Luzio | Financial Econometrics</title>
+
+    <style>
+        :root {
+            --background: #f5f7fb;
+            --surface: rgba(255, 255, 255, 0.82);
+            --surface-solid: #ffffff;
+            --text: #172033;
+            --muted: #627087;
+            --primary: #2457e6;
+            --primary-dark: #173ca7;
+            --border: rgba(23, 32, 51, 0.10);
+            --shadow: 0 20px 60px rgba(40, 55, 90, 0.12);
+            --radius: 22px;
+            --max-width: 1120px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter, ui-sans-serif, system-ui, -apple-system,
+                BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(36, 87, 230, 0.12), transparent 28%),
+                radial-gradient(circle at 90% 5%, rgba(130, 80, 255, 0.10), transparent 25%),
+                var(--background);
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(var(--max-width), calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(18px);
+            background: rgba(245, 247, 251, 0.82);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-content {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .logo {
+            font-size: 1.05rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-button {
+            display: none;
+            border: 0;
+            background: transparent;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        header {
+            padding: 120px 0 80px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.4fr 0.6fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 22px;
+            padding: 8px 13px;
+            border: 1px solid rgba(36, 87, 230, 0.18);
+            border-radius: 999px;
+            background: rgba(36, 87, 230, 0.08);
+            color: var(--primary);
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        h1 {
+            max-width: 780px;
+            font-size: clamp(3.2rem, 8vw, 6.5rem);
+            line-height: 0.95;
+            letter-spacing: -0.075em;
+        }
+
+        .gradient-text {
+            background: linear-gradient(120deg, var(--primary), #8057ee);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero-description {
+            max-width: 720px;
+            margin-top: 30px;
+            color: var(--muted);
+            font-size: 1.18rem;
+        }
+
+        .hero-description strong {
+            color: var(--text);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 34px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
+            padding: 0 22px;
+            border-radius: 13px;
+            border: 1px solid var(--border);
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .button-primary {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 12px 30px rgba(36, 87, 230, 0.25);
+        }
+
+        .button-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            background: rgba(255, 255, 255, 0.70);
+        }
+
+        .button-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .profile-card {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 330px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.70);
+            border-radius: 40px;
+            background:
+                linear-gradient(145deg, rgba(36, 87, 230, 0.95), rgba(116, 75, 215, 0.92));
+            box-shadow: var(--shadow);
+        }
+
+        .profile-card::before,
+        .profile-card::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .profile-card::before {
+            width: 220px;
+            height: 220px;
+            top: -80px;
+            right: -70px;
+        }
+
+        .profile-card::after {
+            width: 160px;
+            height: 160px;
+            bottom: -60px;
+            left: -50px;
+        }
+
+        .initials {
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
+            font-size: 5rem;
+            font-weight: 850;
+            letter-spacing: -0.08em;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            max-width: 680px;
+            margin-bottom: 42px;
+        }
+
+        .section-label {
+            color: var(--primary);
+            font-size: 0.80rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            margin-top: 8px;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            line-height: 1.05;
+            letter-spacing: -0.055em;
+        }
+
+        .section-intro {
+            margin-top: 16px;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 28px;
+        }
+
+        .card {
+            padding: 32px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--surface);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 15px 45px rgba(30, 45, 75, 0.06);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+            letter-spacing: -0.025em;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(36, 87, 230, 0.08);
+            color: var(--primary);
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .details-list {
+            display: grid;
+            gap: 18px;
+        }
+
+        .detail span {
+            display: block;
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .detail strong {
+            font-size: 0.98rem;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .research-card {
+            position: relative;
+            min-height: 290px;
+            padding: 32px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--surface-solid);
+            transition: 0.25s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+        }
+
+        .research-number {
+            margin-bottom: 48px;
+            color: rgba(36, 87, 230, 0.18);
+            font-size: 3rem;
+            font-weight: 850;
+            line-height: 1;
+        }
+
+        .research-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.35rem;
+            line-height: 1.25;
+        }
+
+        .research-card p {
+            color: var(--muted);
+            font-size: 0.96rem;
+        }
+
+        .research-status {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--primary);
+            font-size: 0.82rem;
+            font-weight: 750;
+        }
+
+        .timeline {
+            position: relative;
+            display: grid;
+            gap: 20px;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+            gap: 28px;
+            padding: 26px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .timeline-date {
+            color: var(--primary);
+            font-size: 0.88rem;
+            font-weight: 750;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.12rem;
+        }
+
+        .timeline-content p {
+            margin-top: 5px;
+            color: var(--muted);
+        }
+
+        .contact-box {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 30px;
+            padding: 52px;
+            border-radius: 30px;
+            background: var(--text);
+            color: #ffffff;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-box h2 {
+            margin-top: 0;
+        }
+
+        .contact-box p {
+            max-width: 620px;
+            margin-top: 14px;
+            color: rgba(255, 255, 255, 0.70);
+        }
+
+        .contact-box .button {
+            border-color: rgba(255, 255, 255, 0.20);
+            background: #ffffff;
+            color: var(--text);
+            white-space: nowrap;
+        }
+
+        footer {
+            padding: 38px 0;
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            border-top: 1px solid var(--border);
+            padding-top: 28px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        @media (max-width: 850px) {
+            .hero,
+            .about-grid,
+            .contact-box {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                gap: 45px;
+            }
+
+            .profile-card {
+                min-height: 240px;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-box {
+                padding: 34px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .menu-button {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 72px;
+                left: 20px;
+                right: 20px;
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 22px;
+                border: 1px solid var(--border);
+                border-radius: 16px;
+                background: var(--surface-solid);
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            header {
+                padding: 80px 0 50px;
+            }
+
+            h1 {
+                font-size: 3.5rem;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Gabriele Di Luzio</h1>
 
-    <p>
-        PhD Candidate in Statistics and Quantitative Finance
-        at Sapienza University of Rome.
-    </p>
+<nav>
+    <div class="container nav-content">
+        <a class="logo" href="#home">Gabriele Di Luzio</a>
 
-    <h2>Research</h2>
-    <p>
-        My research focuses on financial econometrics,
-        dependence modelling, copulas and climate risk.
-    </p>
+        <button class="menu-button"
+                aria-label="Open menu"
+                onclick="toggleMenu()">
+            ☰
+        </button>
 
-    <h2>Contact</h2>
-    <p>Email: gabrielediluzio98@gmail.com</p>
+        <ul class="nav-links" id="navigation">
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="cv.pdf" target="_blank">CV</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header id="home">
+    <div class="container hero">
+
+        <div>
+            <div class="eyebrow">
+                PhD Candidate · Financial Econometrics
+            </div>
+
+            <h1>
+                Gabriele<br>
+                <span class="gradient-text">Di Luzio.</span>
+            </h1>
+
+            <p class="hero-description">
+                PhD Candidate in Statistics and Quantitative Finance at
+                <strong>Sapienza University of Rome</strong>.
+                My research focuses on financial econometrics,
+                dynamic dependence models, copulas, systemic risk
+                and climate finance.
+            </p>
+
+            <div class="hero-actions">
+                <a class="button button-primary" href="#research">
+                    Explore my research
+                </a>
+
+                <a class="button button-secondary"
+                   href="cv.pdf"
+                   target="_blank">
+                    Download CV
+                </a>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <div class="initials">GDL</div>
+        </div>
+
+    </div>
+</header>
+
+<main>
+
+    <section id="about">
+        <div class="container">
+
+            <div class="section-header">
+                <span class="section-label">About</span>
+                <h2>Researching dependence in financial markets.</h2>
+
+                <p class="section-intro">
+                    I develop econometric methods for measuring dynamic,
+                    nonlinear and tail dependence across financial assets.
+                </p>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="card">
+                    <h3>Research profile</h3>
+
+                    <p>
+                        My work combines time-series econometrics,
+                        copula models and high-dimensional dependence estimation.
+                        A central part of my research examines how climate-related
+                        information affects credit-market dependence and systemic risk.
+                    </p>
+
+                    <div class="interests">
+                        <span class="tag">Financial econometrics</span>
+                        <span class="tag">Copulas</span>
+                        <span class="tag">GAS models</span>
+                        <span class="tag">Systemic risk</span>
+                        <span class="tag">Climate finance</span>
+                        <span class="tag">Covariance estimation</span>
+                    </div>
+                </div>
+
+                <div class="card details-list">
+
+                    <div class="detail">
+                        <span>Current position</span>
+                        <strong>PhD Candidate</strong>
+                    </div>
+
+                    <div class="detail">
+                        <span>Institution</span>
+                        <strong>Sapienza University of Rome</strong>
+                    </div>
+
+                    <div class="detail">
+                        <span>Department</span>
+                        <strong>Department of Statistical Sciences</strong>
+                    </div>
+
+                    <div class="detail">
+                        <span>Research area</span>
+                        <strong>Statistics and Quantitative Finance</strong>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="research">
+        <div class="container">
+
+            <div class="section-header">
+                <span class="section-label">Selected research</span>
+                <h2>Current projects.</h2>
+
+                <p class="section-intro">
+                    Research projects in financial dependence,
+                    climate risk and high-dimensional covariance modelling.
+                </p>
+            </div>
+
+            <div class="research-grid">
+
+                <article class="research-card">
+                    <div class="research-number">01</div>
+
+                    <h3>
+                        Modelling the Impact of Climate News on CDS Dependence
+                    </h3>
+
+                    <p>
+                        A dynamic factor copula framework with score-driven
+                        loadings for studying how physical and transition climate
+                        risks affect dependence across European credit default swaps.
+                    </p>
+
+                    <span class="research-status">Working paper</span>
+                </article>
+
+                <article class="research-card">
+                    <div class="research-number">02</div>
+
+                    <h3>
+                        Dynamic Conditional Dependence and Covariance Estimation
+                    </h3>
+
+                    <p>
+                        High-dimensional covariance estimation combining
+                        volatility dynamics with robust rank-based measures
+                        of dependence.
+                    </p>
+
+                    <span class="research-status">Doctoral research</span>
+                </article>
+
+                <article class="research-card">
+                    <div class="research-number">03</div>
+
+                    <h3>
+                        Tail Dependence and Systemic Credit Risk
+                    </h3>
+
+                    <p>
+                        Measurement of joint distress probabilities and
+                        tail dependence across firms, industries and
+                        periods of financial or climate-related stress.
+                    </p>
+
+                    <span class="research-status">Research project</span>
+                </article>
+
+                <article class="research-card">
+                    <div class="research-number">04</div>
+
+                    <h3>
+                        Systemic Illiquidity and Flexible Copula Models
+                    </h3>
+
+                    <p>
+                        A framework for integrating realized illiquidity,
+                        latent systemic factors and nonlinear dependence
+                        into systemic-risk measurement.
+                    </p>
+
+                    <span class="research-status">Work in progress</span>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+
+            <div class="section-header">
+                <span class="section-label">Background</span>
+                <h2>Education and experience.</h2>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 – Present</div>
+
+                    <div class="timeline-content">
+                        <h3>PhD in Statistics</h3>
+                        <p>
+                            Sapienza University of Rome,
+                            Department of Statistical Sciences.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2026</div>
+
+                    <div class="timeline-content">
+                        <h3>Visiting PhD Student</h3>
+                        <p>
+                            Ludwig Maximilian University of Munich,
+                            Department of Statistics.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 – 2023</div>
+
+                    <div class="timeline-content">
+                        <h3>MSc in Quantitative Finance</h3>
+                        <p>
+                            Sapienza University of Rome.
+                            Final grade: 110/110 cum laude.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2017 – 2020</div>
+
+                    <div class="timeline-content">
+                        <h3>BSc in Economics</h3>
+                        <p>
+                            Sapienza University of Rome.
+                            Final grade: 110/110.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+
+            <div class="contact-box">
+
+                <div>
+                    <span class="section-label">Contact</span>
+
+                    <h2>Research and collaboration.</h2>
+
+                    <p>
+                        For research discussions, seminars,
+                        academic collaborations or professional opportunities,
+                        contact me by email.
+                    </p>
+                </div>
+
+                <a class="button"
+                   href="mailto:gabrielediluzio98@gmail.com">
+                    Send an email
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-content">
+
+        <p>
+            © <span id="year"></span> Gabriele Di Luzio
+        </p>
+
+        <div class="footer-links">
+            <a href="mailto:gabrielediluzio98@gmail.com">Email</a>
+
+            <!-- Sostituisci # con i tuoi link reali -->
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">Google Scholar</a>
+            <a href="#" target="_blank">GitHub</a>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+    function toggleMenu() {
+        document
+            .getElementById("navigation")
+            .classList
+            .toggle("open");
+    }
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            document
+                .getElementById("navigation")
+                .classList
+                .remove("open");
+        });
+    });
+</script>
+
 </body>
 </html>
