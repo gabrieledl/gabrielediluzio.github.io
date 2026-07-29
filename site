@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriele Di Luzio</title>
+</head>
+
+<body>
+    <h1>Gabriele Di Luzio</h1>
+
+    <p>
+        PhD Candidate in Statistics and Quantitative Finance
+        at Sapienza University of Rome.
+    </p>
+
+    <h2>Research</h2>
+    <p>
+        My research focuses on financial econometrics,
+        dependence modelling, copulas and climate risk.
+    </p>
+
+    <h2>Contact</h2>
+    <p>Email: gabrielediluzio98@gmail.com</p>
+</body>
+</html>
