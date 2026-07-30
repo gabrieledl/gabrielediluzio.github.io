@@ -6,7 +6,7 @@
 
   <meta
     name="description"
-    content="Gabriele Di Luzio — PhD Candidate in Finance and Institutions. My research focuses on financial econometrics, dependence modelling, systemic risk, and climate finance."
+    content="Gabriele Di Luzio — PhD Candidate in Finance and Institutions. Research in financial econometrics, dependence modelling, systemic risk, and climate finance."
   >
 
   <title>Gabriele Di Luzio</title>
@@ -210,6 +210,29 @@
       font-size: 0.9rem;
     }
 
+    .project {
+      max-width: 760px;
+      padding: 4px 0;
+    }
+
+    .project h3 {
+      margin-bottom: 8px;
+    }
+
+    .project h3 a {
+      text-decoration: none;
+    }
+
+    .project h3 a:hover {
+      text-decoration: underline;
+    }
+
+    .project-description {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
     .timeline-row {
       display: grid;
       grid-template-columns: 135px minmax(0, 1fr);
@@ -285,6 +308,7 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#papers">Research</a>
+        <a href="#projects">Other Projects</a>
         <a href="#background">Background</a>
         <a href="#contact">Contact</a>
       </div>
@@ -456,6 +480,27 @@
       </article>
     </section>
 
+    <section id="projects">
+      <h2>Other Projects</h2>
+
+      <article class="project">
+        <h3>
+          <a
+            href="http://127.0.0.1:3838/"
+            target="_blank"
+            rel="noopener"
+          >
+            Credit VaR Calculator
+          </a>
+        </h3>
+
+        <p class="project-description">
+          An interactive Shiny application for calculating portfolio Credit VaR
+          using the Vasicek one-factor model.
+        </p>
+      </article>
+    </section>
+
     <section id="background">
       <h2>Background</h2>
 
@@ -473,7 +518,7 @@
       </div>
 
       <div class="timeline-row">
-        <div class="date">2026 (April - July)</div>
+        <div class="date">2026 (April–July)</div>
 
         <div>
           <strong>Visiting PhD Student</strong>
@@ -519,7 +564,7 @@
       <h2>Contact</h2>
 
       <p>
-       If you want to reach out to me, drop a message 
+        If you want to reach out to me, drop a message
         <a href="mailto:gabriele.diluzio@uniroma1.it">
           here
         </a>.
