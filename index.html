@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta
     name="description"
     content="Gabriele Di Luzio — PhD Candidate in Finance and Institutions. My research focuses on financial econometrics, dependence modelling, systemic risk, and climate finance."
   >
+
   <title>Gabriele Di Luzio</title>
 
   <style>
@@ -18,14 +20,20 @@
       --max: 980px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       color: var(--ink);
       background: #fff;
-      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Arial, sans-serif;
     }
 
     a {
@@ -33,7 +41,9 @@
       text-underline-offset: 3px;
     }
 
-    a:hover { color: #0d2f51; }
+    a:hover {
+      color: #0d2f51;
+    }
 
     .wrap {
       width: min(var(--max), calc(100% - 40px));
@@ -72,8 +82,13 @@
       text-decoration: none;
     }
 
-    .nav-links a:hover { text-decoration: underline; }
-    main { padding: 64px 0 80px; }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 64px 0 80px;
+    }
 
     .intro {
       display: grid;
@@ -91,7 +106,9 @@
       filter: saturate(0.82);
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       font-family: Georgia, "Times New Roman", serif;
       font-weight: 600;
     }
@@ -134,8 +151,28 @@
       font-size: 1.75rem;
     }
 
-    .about { max-width: 760px; }
-    .about p:first-child { margin-top: 0; }
+    .about {
+      max-width: 760px;
+    }
+
+    .about p:first-child {
+      margin-top: 0;
+    }
+
+    .paper-group-title {
+      margin: 35px 0 12px;
+      color: var(--muted);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial,
+        sans-serif;
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .paper-group-title:first-of-type {
+      margin-top: 0;
+    }
 
     .paper {
       display: grid;
@@ -145,8 +182,8 @@
       border-top: 1px solid #ececec;
     }
 
-    .paper:first-of-type {
-      padding-top: 0;
+    .paper-group-title + .paper {
+      padding-top: 10px;
       border-top: 0;
     }
 
@@ -161,7 +198,7 @@
       line-height: 1.45;
     }
 
-    .paper p {
+    .authors {
       max-width: 760px;
       margin: 7px 0 0;
       color: var(--muted);
@@ -210,21 +247,27 @@
     }
 
     @media (max-width: 680px) {
-      nav { align-items: flex-start; }
+      nav {
+        align-items: flex-start;
+      }
 
       .nav-links {
         justify-content: flex-end;
         gap: 10px 16px;
       }
 
-      main { padding-top: 42px; }
+      main {
+        padding-top: 42px;
+      }
 
       .intro {
         grid-template-columns: 1fr;
         gap: 28px;
       }
 
-      .portrait { width: 150px; }
+      .portrait {
+        width: 150px;
+      }
 
       .timeline-row {
         grid-template-columns: 1fr;
@@ -250,7 +293,11 @@
 
   <main class="wrap">
     <div class="intro">
-      <img class="portrait" src="profile.jpg" alt="Gabriele Di Luzio">
+      <img
+        class="portrait"
+        src="profile.jpg"
+        alt="Gabriele Di Luzio"
+      >
 
       <div>
         <h1>Gabriele Di Luzio</h1>
@@ -264,23 +311,23 @@
           covariance estimation, copula models, systemic risk, and climate finance.
         </p>
 
-       <div class="quick-links">
-  <a href="cv.pdf" target="_blank" rel="noopener">
-    Curriculum Vitae
-  </a>
+        <div class="quick-links">
+          <a href="cv.pdf" target="_blank" rel="noopener">
+            Curriculum Vitae
+          </a>
 
-  <a
-    href="https://www.linkedin.com/in/gabriele-di-luzio-79980517b/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    LinkedIn
-  </a>
+          <a
+            href="https://www.linkedin.com/in/gabriele-di-luzio-79980517b/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
 
-  <a href="mailto:gabriele.diluzio@uniroma1.it">
-    Email
-  </a>
-</div>
+          <a href="mailto:gabriele.diluzio@uniroma1.it">
+            Email
+          </a>
+        </div>
       </div>
     </div>
 
@@ -290,9 +337,10 @@
       <div class="about">
         <p>
           I am a PhD Candidate in Finance and Institutions at the Department
-          of Social and Economic Sciences of Sapienza University of Rome. During my PhD,
-          I have been a visiting student at the Department of Statistics of Ludwig
-          Maximilian University of Munich and the Munich Center for Machine Learning.
+          of Social and Economic Sciences of Sapienza University of Rome.
+          During my PhD, I have been a visiting student at the Department of
+          Statistics of Ludwig Maximilian University of Munich and the Munich
+          Center for Machine Learning.
         </p>
 
         <p>
@@ -309,22 +357,29 @@
     </section>
 
     <section id="papers">
-      <h2>Working papers</h2>
+      <h2>Working Papers</h2>
+
+      <h3 class="paper-group-title">Completed Papers</h3>
 
       <article class="paper">
         <div class="number">1</div>
 
         <div>
-          <h3>Dynamic Conditional SKEPTIC</h3>
+          <h3>
+            Robust Semiparametric Graphical Models with Skew-Elliptical
+            Distributions
+          </h3>
 
-          <p>
-            A high-dimensional framework combining volatility dynamics and
-            robust rank-based dependence measures for dynamic covariance
-            matrix estimation.
+          <p class="authors">
+            <strong>G. Di Luzio and G. Morelli</strong>
           </p>
 
           <div class="paper-links">
-            <a href="https://arxiv.org/pdf/2512.11648" target="_blank" rel="noopener">
+            <a
+              href="https://arxiv.org/pdf/2501.08033"
+              target="_blank"
+              rel="noopener"
+            >
               PDF
             </a>
           </div>
@@ -335,21 +390,68 @@
         <div class="number">2</div>
 
         <div>
-          <h3>
-            Robust Semiparametric Graphical Models with Skew-Elliptical
-            Distributions
-          </h3>
+          <h3>Dynamic Conditional SKEPTIC</h3>
 
-          <p>
-            A robust semiparametric framework for graphical modelling under
-            skew-elliptical distributions.
+          <p class="authors">
+            <strong>G. Di Luzio and G. Morelli</strong>
           </p>
 
           <div class="paper-links">
-            <a href="https://arxiv.org/pdf/2501.08033" target="_blank" rel="noopener">
+            <a
+              href="https://arxiv.org/pdf/2512.11648"
+              target="_blank"
+              rel="noopener"
+            >
               PDF
             </a>
           </div>
+        </div>
+      </article>
+
+      <h3 class="paper-group-title">Work in Progress</h3>
+
+      <article class="paper">
+        <div class="number">3</div>
+
+        <div>
+          <h3>
+            Climate-Informed Geostatistical Credit Risk Assessment via Large
+            Language Models
+          </h3>
+
+          <p class="authors">
+            <strong>G. Di Luzio and G. Morelli</strong>
+          </p>
+        </div>
+      </article>
+
+      <article class="paper">
+        <div class="number">4</div>
+
+        <div>
+          <h3>
+            Modelling the Impact of Climate News on CDS Dependence: A
+            Generalized Autoregressive Score Approach
+          </h3>
+
+          <p class="authors">
+            <strong>G. Di Luzio, G. Morelli, and T. Nagler</strong>
+          </p>
+        </div>
+      </article>
+
+      <article class="paper">
+        <div class="number">5</div>
+
+        <div>
+          <h3>
+            Climate-Driven Dynamics of Volatility Interconnections in Equity
+            Markets
+          </h3>
+
+          <p class="authors">
+            <strong>G. Di Luzio, G. Morelli, and G. Vagnani</strong>
+          </p>
         </div>
       </article>
     </section>
@@ -359,18 +461,23 @@
 
       <div class="timeline-row">
         <div class="date">2023–Present</div>
+
         <div>
           <strong>PhD in Finance and Institutions</strong>
+
           <p>
-            Sapienza University of Rome, Department of Social and Economic Sciences.
+            Sapienza University of Rome, Department of Social and Economic
+            Sciences.
           </p>
         </div>
       </div>
 
       <div class="timeline-row">
         <div class="date">2026</div>
+
         <div>
           <strong>Visiting PhD Student</strong>
+
           <p>
             Ludwig Maximilian University of Munich, Department of Statistics,
             and Munich Center for Machine Learning.
@@ -380,22 +487,30 @@
 
       <div class="timeline-row">
         <div class="date">2020–2023</div>
+
         <div>
           <strong>
             MSc in Quantitative Finance, Department of Statistical Sciences
           </strong>
-          <p>Sapienza University of Rome · 110/110 cum laude.</p>
+
+          <p>
+            Sapienza University of Rome · 110/110 cum laude.
+          </p>
         </div>
       </div>
 
       <div class="timeline-row">
         <div class="date">2017–2020</div>
+
         <div>
           <strong>
             BSc in Statistics, Financial and Actuarial Sciences, Department
             of Statistical Sciences
           </strong>
-          <p>Sapienza University of Rome.</p>
+
+          <p>
+            Sapienza University of Rome.
+          </p>
         </div>
       </div>
     </section>
@@ -420,7 +535,8 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
 </body>
 </html>
